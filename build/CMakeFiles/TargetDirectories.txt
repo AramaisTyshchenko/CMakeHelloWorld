@@ -1,3 +1,0 @@
-/home/parallels/TestProject/build/CMakeFiles/HelloWorld.dir
-/home/parallels/TestProject/build/CMakeFiles/edit_cache.dir
-/home/parallels/TestProject/build/CMakeFiles/rebuild_cache.dir
