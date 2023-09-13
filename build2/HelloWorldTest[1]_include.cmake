@@ -1,0 +1,5 @@
+if(EXISTS "/home/parallels/TestProject/build2/HelloWorldTest[1]_tests.cmake")
+  include("/home/parallels/TestProject/build2/HelloWorldTest[1]_tests.cmake")
+else()
+  add_test(HelloWorldTest_NOT_BUILT HelloWorldTest_NOT_BUILT)
+endif()
