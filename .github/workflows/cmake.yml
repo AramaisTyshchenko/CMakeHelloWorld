@@ -1,4 +1,4 @@
-name: CMake Build and Test
+name: CMake Build and Test in Docker
 
 on:
   push:
@@ -15,17 +15,8 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: sudo apt-get install -y cmake g++
+    - name: Build Docker Image
+      run: docker build -t cmake-hello-world .
 
-    - name: Create Build Directory
-      run: mkdir build
-
-    - name: Generate CMake Build Files
-      run: cmake -B build
-
-    - name: Build Project
-      run: cmake --build build --config Release
-
-    - name: Run Tests
-      run: ./build/HelloWorldTest
+    - name: Run Docker Container
+      run: docker run cmake-hello-world
