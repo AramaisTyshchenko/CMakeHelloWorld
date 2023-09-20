@@ -32,4 +32,6 @@ RUN mkdir build && \
     ./HelloWorldTest
 
 # Start Mosquitto and UDP server
-CMD ["sh", "-c", "mosquitto -d && python3 udp_server.py"]
+#&& python3 udp_server.py
+CMD ["sh", "-c", "mosquitto -d && python3 udp_server.py & "]
+
